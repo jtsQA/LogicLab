@@ -21,10 +21,11 @@ public class SongsPlaylistTest {
 
 	private final String USER_1 = "user_1", USER_2 = "user_2", USER_3 = "user_3";
 	private final String SONG_1 = "song_1", SONG_2 = "song_2", SONG_3 = "song_3", SONG_4 = "song_4", SONG_5 = "song_5";
+	private final int SONGS_COUNT = 4;
 
 	@Test
 	public void testGetSongsPlaylist() {
-		SongsPlaylist playlist = new SongsPlaylist(4);
+		SongsPlaylist playlist = new SongsPlaylist(SONGS_COUNT);
 
 		playlist.addNewSong(USER_1, SONG_1).addNewSong(USER_1, SONG_2).addNewSong(USER_1, SONG_3).addNewSong(USER_1, SONG_4).addNewSong(USER_1, SONG_1);
 		System.out.println("User 1: " + playlist.getRecentSongs(USER_1));
